@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- type a head -->
+
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+   
+
+
+</head>
+<body >
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg  bs-tertiary-color" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand  fs-2"> <h1>V I L L A</h1></a>
+            <button
+                class="navbar-toggler bg-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link   fs-5  " aria-current="page" id="home" data-toggle="tooltip" data-placement="bottom" title="Home"  href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  fs-5  " id="pro" data-toggle="tooltip" data-placement="bottom" title="Property" href="./property.html">Property</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   fs-5  " id="prop1" data-toggle="tooltip" data-placement="bottom" title="PropertyDetails" href="./propertyDetails.html">PropertyDetails</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5 " id="con" data-toggle="tooltip" data-placement="bottom" title="Contact" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+
+      
+    <!-- page heading -->
+
+       
+    <div class="col container-fluid" id="propertHeading">
+        <h1 class="text-white">Customer FeedBack</h1>
+    </div>
+
+
+    <!-- form  -->
+        <div class="row container-fluid">
+            <div class="col-sm-6 mt-5">
+                <div class=" container-fluid ">
+                    <h1 class="text-center">Rate Your Visit</h1>
+                    <form id="form">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-label">Property Name</label>
+                                <input type="text" class="form-control" id="propertyName" > 
+                                <p class="error" id="PropErr"></p>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" >
+                                <p class="error" id="nameErr"></p>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" >
+                                <p class="error" id="emailErr"></p>
+                            </div>
+                            <div class="col-12">
+                                <label for="mobile" class="form-label">Mobile</label>
+                                <input type="number" class="form-control" id="mobile" >
+                                <p class="error" id="mobileErr"></p>
+                            </div>
+                            <div class="col-12">
+                                <label for="rating" class="form-label">Rating for Property</label>
+                                
+                               <div id="starRating" class="">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                
+                               </div>
+                             
+
+                            </div>
+                        </div>
+                         <!-- Button trigger modal  -->
+                        <div class="row">
+                            <div class="col-md-6 d-flex justify-content-between mt-5">
+                                <button type="button" id="btn" class="btn btn-success col-md-5 mb-4">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 container-fluid">
+                <div class="mb-5">
+                    <img src="./assets/images/thanksimg.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    
+
+
+    <!-- modal form -->
+
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Thank You</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p style="color: greenyellow;">Your Rating is Updated</p>
+           <span id="updatePropertyName"> </span>
+           <br>
+           <span id="updateName"></span>
+           <br>
+           <span id="ratingValue"></span>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- footer -->
+    <div class="container-fluid mt-3" id="footer">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 d-flex justify-content-between">
+            <div class="col mt-5">
+                <h1 class="text-center">V I L L A</h1>
+            </div>
+             
+            <div class="col mt-3 text-center">
+                <h5>Visit Our Office</h5>
+                <p>500 Terry Francine Street</p>
+                <p>San Francisco, CA 94158</p>
+            </div>
+            
+            <div class="col mt-3 text-center">
+                <h5>STAY CONNECTED</h5>
+                <div>
+                    <img class="p-3" id="fb" src="./assets/images/icons/icons8-fb.svg" alt="">
+                    <img class="p-3" id="insta" src="./assets/images/icons/icons8-instagram.svg" alt="">
+                    <img class="p-3" id="twit" src="./assets/images/icons/icons8-twitter.svg" alt="">
+                </div>
+            </div>
+        </div> 
+    </div>
+      </div>
+    
+
+    <script src="./assets/script/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
